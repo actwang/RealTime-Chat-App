@@ -38,5 +38,5 @@ The newer versions of django and channels installed through pip3 involves compat
 
 For details, check out this [stackoverflow](https://stackoverflow.com/questions/74091600/asgi-application-not-working-with-django-channels) post
 
-##### Future work
+#### Future work
 To add additional functionalities, in the future the task to create new rooms can be delegated to users or some selected group of authenticated users. To improve performance, use Redis as the channel_layer in this project and specify in settings.py. For performance scaling considerations, it's recommended to use a database more suitable and robust for higher consistency and scalability such as MySQL or POSTgreSQL. It's also recommended to use Redis for the channel_layers in this project, and specify it in settings.py of RealTimeChatApp directory.
