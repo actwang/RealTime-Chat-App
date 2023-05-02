@@ -1,0 +1,22 @@
+{% extends 'core/base.html'%}
+{% load static %}
+{%block title%}
+Chat Rooms | 
+{% endblock%}
+{% block content%}
+<div class="px-10 py-7 lg:p-20 text-center">
+    <h1 class="text-3xl lg:text-6xl text-white">Rooms</h1>
+</div>
+<!--flex wrap says if it exceeds the page it should be placed onto new line-->
+<div class="w-full flex flex-wrap items-center">
+    {% for room in rooms %}
+        <div class="w-full lg:w-1/4 px-3 py-4">
+            <div class="p-4 bg-white shadow rounded-xl text-center">
+                <h2 class="mb-5 text-3xl font-semibold"> {{room.name}}</h2>
+                <!--url takes a path name, and -->
+                <a href="{% url 'room' room.slug %}" class="px-5 py-3 block rounded-xl text-white bg-teal-600 hover:bg-teal-700">Join</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
