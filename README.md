@@ -50,5 +50,21 @@ The newer versions of django and channels installed through pip3 involves compat
 
 For details, check out this [stackoverflow](https://stackoverflow.com/questions/74091600/asgi-application-not-working-with-django-channels) post.
 
+#### Running
+To run the Application locally after installation, run the following command:
+
+`python3 manage.py runserver <optional port number>`
+
+and access the webApp at the specified IP location.
+
+##### Admin privlidges
+To add rooms as an administrator in Django, use:
+
+`python3 manage.py createsuperuser`
+
+and follow the prompts. Admin page at IP:port/admin, and login with your credentials you created.
+After login, admins can edit Room information. 
+
+
 #### Future work
 To add additional functionalities, in the future the task to create new rooms can be delegated to users or some selected group of authenticated users. To improve performance, use Redis as the channel_layer in this project and specify in settings.py. For performance scaling considerations, it's recommended to use a database more suitable and robust for higher consistency and scalability such as MySQL or POSTgreSQL. It's also recommended to use Redis for the channel_layers in this project, and specify it in settings.py of RealTimeChatApp directory.
